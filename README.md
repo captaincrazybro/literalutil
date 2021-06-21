@@ -14,7 +14,7 @@ s = s.Replace("world", "golang")
 ## Additional features:
  * Conditional ternary
 
-## Contional ternary example:
+### Contional ternary example:
 ```go
 // returning all types...
 conditional := true
