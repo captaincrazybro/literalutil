@@ -16,3 +16,8 @@
 
 # IDEA files
 .idea
+
+# main testing file
+main
+main/*
+main/main.go

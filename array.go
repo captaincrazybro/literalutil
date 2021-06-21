@@ -7,9 +7,8 @@ import (
 // Array type of array to add class functions to
 type Array []interface{}
 
-// ToA returns the raw array
-func (a Array) ToA() []interface{} {
-	return a
+func (a Array) String() string {
+	return fmt.Sprintf("[%s]", a.Join(", "))
 }
 
 // ForEach loops through the current array and runs the provided function
@@ -100,11 +99,28 @@ func (a Array) Remove(index int) Array {
 }
 
 // Sort not finished yet
-func (arr Array) Sort(f func(a interface{}, b interface{}) int) Array {
-	/*for i, v := range arr {
+func (a Array) Sort(f func(a interface{}, b interface{}) int) Array {
+	for i, elemA := range a {
+		if i != 0 {
+			i2 := 0
+			for f(elemA, a[i2]) > 0 && i2 < a.Len() {
+				i2++
+			}
 
-	}*/
-	return arr
+			var i3, length int
+			if i > i2 {
+				length = i
+				i3 = i2
+			} else {
+				length = i2
+				i3 = i
+			}
+			for ; i3 < length; i3++ {
+				a.Swap(i3, length)
+			}
+		}
+	}
+	return a
 }
 
 // Swap switches these two elements around
