@@ -16,7 +16,7 @@ s = s.Replace("world", "golang")
 
 ### Contional ternary example:
 ```go
-// returning all types...
+// returning all types
 conditional := true
 fmt.Printf("Output: %v\n", lu.Ternary(conditional, Array{1, 2, 3}, Array{"a", "b", "c"}))
 // Output: [1, 2, 3]
