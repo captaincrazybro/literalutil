@@ -8,13 +8,16 @@ s = s.Replace("world", "golang")
 ```
 
 ## Current supported structure types:
- * string
+ * String
  * Array
+ * SArray
+ * IArray
 
 ## Additional features:
- * Conditional ternary
+ * Conditional Ternary
+ * Single line If and If Else statements
 
-### Contional ternary example:
+### Contional Ternary example:
 ```go
 // returning all types
 conditional := true
@@ -30,4 +33,17 @@ fmt.Printf("Output: %v\n", lu.STernary(conditional, "Hello world!", "Hello golan
 conditional = true
 fmt.Printf("Output: %v\n", lu.ITernary(conditional, 1, 2))
 // Output: 1
+```
+
+### Single line If and If Else statements 
+```go
+// single line if statement
+conditional := true
+lu.If(conditional, func(){ fmt.Println("Hello world!") })
+// Hello world!
+
+// single line if else statement
+conditional = false
+lu.Ifelse(conditional, func(){ fmt.Println("Hello world!") }, func(){ fmt.Println("Hello golang!") })
+// Hello golang!
 ```
