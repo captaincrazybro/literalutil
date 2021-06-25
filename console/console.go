@@ -61,7 +61,7 @@ func Errlnf(format string, a ...interface{}){
 
 // F prints a fatal error to the console and exits with status code 1
 func F(v interface{}) {
-	fmt.Print("%s%s", errorPrefix, v)
+	fmt.Printf("%s%s", errorPrefix, v)
 	os.Exit(1)
 }
 
