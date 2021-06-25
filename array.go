@@ -7,8 +7,8 @@ import (
 // Array type of array to add class functions to
 type Array []interface{}
 
-// a converts Array to type []interface{}
-func (A Array) a() []interface{} {
+// Toa converts Array to type []interface{}
+func (A Array) Toa() []interface{} {
 	var a []interface{}
 	for _, v := range A {
 		a = append(a, v)

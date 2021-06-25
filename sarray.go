@@ -8,8 +8,8 @@ func (SA SArray) String() string {
 	return fmt.Sprintf("[%s]", SA.Join(", "))
 }
 
-// sa converts SArray to type []string
-func (SA SArray) sa() []string {
+// Tosa converts SArray to type []string
+func (SA SArray) Tosa() []string {
 	var sa []string
 	for _, v := range SA {
 		sa = append(sa, v.s())

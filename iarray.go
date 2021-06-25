@@ -8,8 +8,8 @@ func (IA IArray) String() string {
 	return fmt.Sprintf("[%s]", IA.Join(", "))
 }
 
-// sa converts SArray to type []string	
-func (IA IArray) sa() []int {
+// Toia converts IArray to type []int
+func (IA IArray) Toia() []int {
 	var ia []int
 	for _, v := range IA {
 		ia = append(ia, v)
