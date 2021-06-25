@@ -12,7 +12,7 @@ func (SA SArray) String() string {
 func (SA SArray) Tosa() []string {
 	var sa []string
 	for _, v := range SA {
-		sa = append(sa, v.s())
+		sa = append(sa, v.Tos())
 	}
 	return sa
 }
