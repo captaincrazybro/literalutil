@@ -17,7 +17,7 @@ func (Str String) Replace(old, new string, num int) String {
 	return String(strings.Replace(Str.Tos(), old, new, num))
 }
 
-func (Str String) Split(sep string) []String {
+func (Str String) Split(sep string) SArray {
 	sz := strings.Split(Str.Tos(), sep)
 	var Sz []String
 
